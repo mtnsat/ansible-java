@@ -1,6 +1,7 @@
-# silpion.java
+# mtnsat.java
 
-Install Oracle Java.
+Install Oracle Java.  Forked from [silpion.java](https://github.com/silpion/ansible-java)
+Don't use this role directly, however, but rather from the mtn_oracle_java wrapper role.
 
 # Synopsis
 
@@ -8,14 +9,14 @@ Install Oracle Java.
 - name: Install Java 8u102 JDK to /opt/java
   hosts: all
   roles:
-    - role: silpion.java
+    - role: mtnsat.java
 ```
 
 ```yaml
 - name: Install Java server-jre to /usr/local/java
   hosts: all
   roles:
-    - role: silpion.java
+    - role: mtnsat.java
       java_oracle_distribution: srv
       java_install_dir: /usr/local/java
 ```
@@ -24,7 +25,7 @@ Install Oracle Java.
 - name: Install Java JRE 8u60
   hosts: all
   roles:
-    - role: silpion.java
+    - role: mtnsat.java
       java_oracle_version: 8u60
       java_oracle_distribution: jre
 ```
